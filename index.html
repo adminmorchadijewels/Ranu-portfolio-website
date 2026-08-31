@@ -65,12 +65,12 @@
 
   <div class="section" id="contact">
     <h2>Contact Me</h2>
-    <div class="contact-form">
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea placeholder="Tell me about your project" rows="4"></textarea>
-      <button>Send Message</button>
-    </div>
+    <form class="contact-form" action="https://formspree.io/f/xbgjdywq" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Tell me about your project" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>python3 -m http.server 8080
   </div>
 
 </body>
