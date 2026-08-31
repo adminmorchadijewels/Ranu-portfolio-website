@@ -23,15 +23,58 @@
   .hero p {
     font-size: 18px;
   }
+  .hero a {
+    background-color: white;
+    color: #2c3e50;
+    padding: 12px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+  .hero a:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
   .section {
     padding: 60px 20px;
     max-width: 800px;
     margin: 0 auto;
   }
+  .section-alt {
+    background-color: #f7f8fa;
+  }
+  .section-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
   .section h2 {
     color: #2c3e50;
     border-bottom: 2px solid #2c3e50;
     padding-bottom: 10px;
+  }
+  .section-inner h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+  }
+  .skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .tag {
+    background-color: #2c3e50;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
   }
   .contact-form input, .contact-form textarea {
     width: 100%;
@@ -40,6 +83,11 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  .contact-form input:focus, .contact-form textarea:focus {
+    border-color: #2c3e50;
+    outline: none;
   }
   .contact-form button {
     background-color: #2c3e50;
@@ -48,6 +96,10 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .contact-form button:hover {
+    background-color: #1a2634;
   }
 </style>
 </head>
@@ -55,19 +107,28 @@
 
   <div class="hero">
     <h1>Hi, I'm Ranu</h1>
-    <p>I help small businesses go digital — with practical planning and AI-assisted web development.</p>
+    <p>Ex-Amazon Catalog Lead, now building websites that actually understand your business.</p>
+    <a href="#contact">Let's Talk</a>
   </div>
 
   <div class="section">
     <h2>About Me</h2>
-    <p>I come from a real estate background and spent months building deep, structured knowledge in business, design, and AI-assisted development. I understand both the business side and the technical side — which means I don't just build websites, I build the RIGHT website for what your business actually needs.</p>
+    <p>I bring 6 years of experience as a Catalog Lead at Amazon, where I worked closely with product data, e-commerce operations, and business processes at scale. Alongside this, I've spent months building deep, structured knowledge in business planning, design thinking, and AI-assisted web development.</p>
+    <p>This combination means I don't just build websites — I understand how real e-commerce businesses actually operate behind the scenes, from product cataloging to customer experience. I build the RIGHT website for what your business actually needs, backed by real industry experience.</p>
   </div>
-<div class="section">
-    <h2>Skills & Services</h2>
-    <p>✔ Website planning & requirement gathering</p>
-    <p>✔ AI-assisted web development (using tools like Claude Code)</p>
-    <p>✔ Basic business + tech consulting for small business owners</p>
-    <p>✔ Structured project planning — from idea to build-ready document</p>
+
+  <div class="section-alt">
+    <div class="section-inner">
+      <h2>Skills & Services</h2>
+      <div class="skills-tags">
+        <span class="tag">Website Planning</span>
+        <span class="tag">AI-Assisted Development</span>
+        <span class="tag">Business + Tech Consulting</span>
+        <span class="tag">E-commerce Strategy</span>
+        <span class="tag">Requirement Gathering</span>
+        <span class="tag">Claude Code</span>
+      </div>
+    </div>
   </div>
 
   <div class="section">
@@ -77,15 +138,16 @@
     <p><em>More live projects coming soon — currently building my first full-stack project as part of my training.</em></p>
   </div>
 
-  <div class="section">
-    <h2>How I Work</h2>
-    <p>1. Understand the business first — what problem are we actually solving?</p>
-    <p>2. Plan clearly in plain language before touching any code</p>
-    <p>3. Build step by step, testing as I go</p>
-    <p>4. Deploy, test again, and hand over something that actually works</p>
+  <div class="section-alt">
+    <div class="section-inner">
+      <h2>How I Work</h2>
+      <p>1. Understand the business first — what problem are we actually solving?</p>
+      <p>2. Plan clearly in plain language before touching any code</p>
+      <p>3. Build step by step, testing as I go</p>
+      <p>4. Deploy, test again, and hand over something that actually works</p>
+    </div>
   </div>
 
-  <div class="section" id="contact">git add .
   <div class="section" id="contact">
     <h2>Contact Me</h2>
     <form class="contact-form" action="https://formspree.io/f/xbgjdywq" method="POST">
